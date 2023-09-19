@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Domain Reputation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>  
+  .blue-text {
+    color: #42a5f5;
+  }
+  </style>
+</head>
+<body>
+  <div class="container d-flex align-items-center justify-content-center vh-100">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center display-3">Domain <span class="blue-text">Reputation</span></h1>
+        <form action="https://global.sitesafety.trendmicro.com/result.php" method="POST" target="_blank"">
+          <input type="text" name="urlname" placeholder="google.com" id="domain" autofocus class="form-control">
+          <input type="hidden" name="getinfo" value="Check Now">
+          <input type="submit" class="btn btn-primary form-control mt-3" value="Check" id="submit">
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+<script>
+  document.getElementById('submit').addEventListener('click', () => {
+    let domain = document.getElementById('domain').value;
+    let sites = [`https://www.virustotal.com/gui/domain/${domain}`, `https://otx.alienvault.com/indicator/hostname/${domain}`,`https://www.talosintelligence.com/reputation_center/lookup?search=${domain}`, 'https://www.brightcloud.com/tools/url-ip-lookup.php']
+    sites.map(site => {
+      window.open(site, "_blank");;
+    })
+  })
+</script>
