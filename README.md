@@ -7,4 +7,5 @@ One-click domain reputation checker for multiple threat intel sites
 - Talos Intelligence
 - Bright Cloud
 - Trend Micro
+- AbuseIP
 > All threat intel sites except for bright cloud are automatically opened to the results page. Bright Cloud needs manual typing (or copy-paste) for it to show results.
