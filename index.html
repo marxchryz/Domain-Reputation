@@ -97,7 +97,6 @@
     let domain = document.getElementById('domain').value;
     if (!document.getElementById('ipMode').checked) {
       let sites = [`https://www.virustotal.com/gui/domain/${domain}`, `https://otx.alienvault.com/indicator/hostname/${domain}`,`https://www.talosintelligence.com/reputation_center/lookup?search=${domain}`, 'https://www.brightcloud.com/tools/url-ip-lookup.php']
-https://otx.alienvault.com/indicator/hostname/${domain}    if(!document.getElementById('ipMode').checked) {
       sites.map(site => {
         window.open(site, "_blank");;
       })
