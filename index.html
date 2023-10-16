@@ -103,7 +103,7 @@ https://otx.alienvault.com/indicator/hostname/${domain}    if(!document.getEleme
       })
     } else {
       e.preventDefault();
-      let sites = [`https://www.virustotal.com/gui/ip-address/${domain}`, `https://otx.alienvault.com/ip/hostname/${domain}`, `https://www.abuseipdb.com/check/${domain}`,`https://www.talosintelligence.com/reputation_center/lookup?search=${domain}`, 'https://www.brightcloud.com/tools/url-ip-lookup.php']
+      let sites = [`https://www.virustotal.com/gui/ip-address/${domain}`, `https://otx.alienvault.com/indicator/ip/${domain}`, `https://www.abuseipdb.com/check/${domain}`,`https://www.talosintelligence.com/reputation_center/lookup?search=${domain}`, 'https://www.brightcloud.com/tools/url-ip-lookup.php']
       sites.map(site => {
         window.open(site, "_blank");;
       })
